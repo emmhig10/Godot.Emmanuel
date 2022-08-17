@@ -1,9 +1,11 @@
-[gd_scene load_steps=6 format=2]
+[gd_scene load_steps=7 format=2]
 
 [ext_resource path="res://Sprites/On (38x38).png" type="Texture" id=1]
+[ext_resource path="res://SpiningBlade.gd" type="Script" id=2]
 
 [sub_resource type="Animation" id=3]
 length = 0.001
+loop = true
 tracks/0/type = "value"
 tracks/0/path = NodePath("Path2D/PathFollow2D/Sprite:frame")
 tracks/0/interp = 1
@@ -36,15 +38,17 @@ tracks/0/keys = {
 
 [sub_resource type="Curve2D" id=1]
 _data = {
-"points": PoolVector2Array(  )
+"points": PoolVector2Array( 0, 0, 0, 0, -36, -2, 0, 0, 0, 0, 172, -1 )
 }
 
 [sub_resource type="CircleShape2D" id=2]
 radius = 18.0
 
 [node name="SpiningBlade" type="Node2D"]
+script = ExtResource( 2 )
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+playback_speed = -3.0
 anims/RESET = SubResource( 3 )
 anims/Spin = SubResource( 4 )
 

@@ -38,7 +38,7 @@ tracks/0/keys = {
 
 [sub_resource type="Curve2D" id=1]
 _data = {
-"points": PoolVector2Array( 0, 0, 0, 0, -22, 0, 0, 0, 0, 0, 122, 0, 0, 0, 0, 0, 80, -15 )
+"points": PoolVector2Array( 0, 0, 0, 0, -22, 0, 0, 0, 0, 0, 122, 0 )
 }
 
 [sub_resource type="CircleShape2D" id=2]
@@ -56,6 +56,8 @@ anims/Spin = SubResource( 4 )
 curve = SubResource( 1 )
 
 [node name="PathFollow2D" type="PathFollow2D" parent="Path2D"]
+position = Vector2( -22, 0 )
+rotate = false
 
 [node name="Sprite" type="Sprite" parent="Path2D/PathFollow2D"]
 texture = ExtResource( 1 )
@@ -65,3 +67,5 @@ hframes = 8
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Path2D/PathFollow2D/Sprite/Area2D"]
 shape = SubResource( 2 )
+
+[connection signal="body_entered" from="Path2D/PathFollow2D/Sprite/Area2D" to="." method="_on_Area2D_body_entered"]

@@ -1073,7 +1073,22 @@ position = Vector2( 1736, 440 )
 rotation = 3.14159
 
 [node name="SavePoint" parent="." instance=ExtResource( 8 )]
-position = Vector2( 287, 86 )
+position = Vector2( 288, 86 )
+
+[node name="SavePoint2" parent="." instance=ExtResource( 8 )]
+position = Vector2( 1130, 134 )
+
+[node name="SavePoint" parent="SavePoint2" instance=ExtResource( 8 )]
+position = Vector2( 1045, -16 )
+
+[node name="SavePoint2" parent="SavePoint2" instance=ExtResource( 8 )]
+position = Vector2( 1566, 144 )
+
+[node name="SavePoint3" parent="SavePoint2" instance=ExtResource( 8 )]
+position = Vector2( 713, 288 )
+
+[node name="SavePoint4" parent="SavePoint2" instance=ExtResource( 8 )]
+position = Vector2( -612, 544 )
 
 [editable path="SpiningBlade"]
 [editable path="SpiningBlade2"]

@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/Pixel-art-Asset-Store.jpg-8c2fa2c116a0186f4bae0e45db0f2096.stex"
+path="res://.import/wood_slab_right.png-8e524b71368181584732dabf8b406e56.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Pixel-art-Asset-Store.jpg"
-dest_files=[ "res://.import/Pixel-art-Asset-Store.jpg-8c2fa2c116a0186f4bae0e45db0f2096.stex" ]
+source_file="res://Sprites/wood_slab_right.png"
+dest_files=[ "res://.import/wood_slab_right.png-8e524b71368181584732dabf8b406e56.stex" ]
 
 [params]
 

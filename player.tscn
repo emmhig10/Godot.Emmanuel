@@ -11,6 +11,7 @@ export (int) var gravity = 400
 export (int) var slide_speed = 400
 
 var velocity = Vector2.ZERO
+var double_jump = true
 
 export (float) var friction = 10
 export (float) var acceleration = 25 
@@ -68,6 +69,7 @@ func _physics_process(delta):
 		player_state = state.IDLE
 	if Input.is_action_just_pressed(\"jump\") and is_on_floor():
 		player_state = state.STARTJUMP
+		double_jump = true
 	elif velocity.x != 0:
 		player_state = state.RUNNING
 		
@@ -76,6 +78,9 @@ func _physics_process(delta):
 			player_state = state.JUMP
 		if velocity.y > 0: 
 			player_state = state.FALL
+		if Input.is_action_just_pressed(\"jump\") and double_jump == true:
+			player_state = state.STARTJUMP
+			double_jump = false
 	
 	handle_state(player_state)
 	update_animation(player_state)

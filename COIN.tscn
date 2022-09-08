@@ -1,7 +1,8 @@
-[gd_scene load_steps=6 format=2]
+[gd_scene load_steps=8 format=2]
 
 [ext_resource path="res://Sprites/coin_pickup_anim_strip_6.png" type="Texture" id=1]
 [ext_resource path="res://Sprites/coin_anim_strip_6.png" type="Texture" id=2]
+[ext_resource path="res://COIN.gd" type="Script" id=3]
 
 [sub_resource type="Animation" id=1]
 length = 0.001
@@ -42,7 +43,7 @@ tracks/2/keys = {
 "values": [ 0 ]
 }
 tracks/3/type = "value"
-tracks/3/path = NodePath("..:visible")
+tracks/3/path = NodePath("../../COIN3:visible")
 tracks/3/interp = 1
 tracks/3/loop_wrap = true
 tracks/3/imported = false
@@ -52,6 +53,18 @@ tracks/3/keys = {
 "transitions": PoolRealArray( 1 ),
 "update": 0,
 "values": [ true ]
+}
+tracks/4/type = "value"
+tracks/4/path = NodePath(".:modulate")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ Color( 1, 1, 1, 1 ) ]
 }
 
 [sub_resource type="Animation" id=2]
@@ -94,7 +107,7 @@ tracks/2/keys = {
 "values": [ 0, 1, 2, 3, 4 ]
 }
 tracks/3/type = "value"
-tracks/3/path = NodePath("..:visible")
+tracks/3/path = NodePath(".:modulate")
 tracks/3/interp = 1
 tracks/3/loop_wrap = true
 tracks/3/imported = false
@@ -102,8 +115,8 @@ tracks/3/enabled = true
 tracks/3/keys = {
 "times": PoolRealArray( 0, 0.5 ),
 "transitions": PoolRealArray( 1, 1 ),
-"update": 1,
-"values": [ true, false ]
+"update": 0,
+"values": [ Color( 1, 1, 1, 1 ), Color( 1, 1, 1, 0 ) ]
 }
 
 [sub_resource type="Animation" id=3]
@@ -147,7 +160,11 @@ tracks/2/keys = {
 "values": [ 0, 1, 2, 3, 4, 5 ]
 }
 
+[sub_resource type="RectangleShape2D" id=4]
+extents = Vector2( 4, 4 )
+
 [node name="COIN" type="Node2D"]
+script = ExtResource( 3 )
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="."]
 root_node = NodePath("../coin")
@@ -158,3 +175,11 @@ anims/RESET = SubResource( 1 )
 [node name="coin" type="Sprite" parent="."]
 texture = ExtResource( 2 )
 hframes = 6
+
+[node name="Area2D" type="Area2D" parent="coin"]
+visible = false
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="coin/Area2D"]
+shape = SubResource( 4 )
+
+[connection signal="body_entered" from="coin/Area2D" to="." method="_on_Area2D_body_entered"]

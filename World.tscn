@@ -1034,7 +1034,6 @@ scale = Vector2( 1, 0.727118 )
 [node name="CollisionShape2D" parent="moving platform/Path2D/PathFollow2D/Sprite/Area2D" index="0"]
 position = Vector2( 16, 0.027832 )
 rotation = -7.73114e-05
-scale = Vector2( 1, 1 )
 
 [node name="ArrowPlateLeft" type="Sprite" parent="moving platform/Path2D" index="1"]
 position = Vector2( -213.072, 459.496 )
@@ -1074,6 +1073,81 @@ position = Vector2( -34, 40 )
 
 [node name="COIN" parent="." instance=ExtResource( 17 )]
 position = Vector2( 9, 67 )
+
+[node name="COIN4" parent="COIN" instance=ExtResource( 17 )]
+position = Vector2( -64, -75 )
+
+[node name="COIN3" parent="COIN" instance=ExtResource( 17 )]
+position = Vector2( -49, -75 )
+
+[node name="COIN2" parent="COIN" instance=ExtResource( 17 )]
+position = Vector2( -34, -58 )
+
+[node name="COIN17" parent="COIN" instance=ExtResource( 17 )]
+position = Vector2( 59, 0 )
+
+[node name="COIN" parent="COIN" instance=ExtResource( 17 )]
+position = Vector2( -97, 2 )
+
+[node name="COIN5" parent="COIN" instance=ExtResource( 17 )]
+position = Vector2( -112, 21 )
+
+[node name="COIN6" parent="COIN" instance=ExtResource( 17 )]
+position = Vector2( -162, 21 )
+
+[node name="COIN7" parent="COIN" instance=ExtResource( 17 )]
+position = Vector2( -159, -27 )
+
+[node name="COIN8" parent="COIN" instance=ExtResource( 17 )]
+position = Vector2( -176, -60 )
+
+[node name="COIN9" parent="COIN" instance=ExtResource( 17 )]
+position = Vector2( -174, -94 )
+
+[node name="COIN10" parent="COIN" instance=ExtResource( 17 )]
+position = Vector2( -193, -124 )
+
+[node name="COIN11" parent="COIN" instance=ExtResource( 17 )]
+position = Vector2( -112, -95 )
+
+[node name="COIN12" parent="COIN" instance=ExtResource( 17 )]
+position = Vector2( -66, -122 )
+
+[node name="COIN13" parent="COIN" instance=ExtResource( 17 )]
+position = Vector2( -41, -156 )
+
+[node name="COIN14" parent="COIN" instance=ExtResource( 17 )]
+position = Vector2( -41, -190 )
+
+[node name="COIN15" parent="COIN" instance=ExtResource( 17 )]
+position = Vector2( -41, -218 )
+
+[node name="COIN16" parent="COIN" instance=ExtResource( 17 )]
+position = Vector2( -17, -124 )
+
+[node name="COIN" parent="COIN/COIN16" instance=ExtResource( 17 )]
+position = Vector2( 16, 17 )
+
+[node name="COIN2" parent="COIN/COIN16" instance=ExtResource( 17 )]
+position = Vector2( 33, 32 )
+
+[node name="COIN3" parent="COIN/COIN16" instance=ExtResource( 17 )]
+position = Vector2( 66, 17 )
+
+[node name="COIN4" parent="COIN/COIN16" instance=ExtResource( 17 )]
+position = Vector2( 97, 2 )
+
+[node name="COIN5" parent="COIN/COIN16" instance=ExtResource( 17 )]
+position = Vector2( 129, 17 )
+
+[node name="COIN6" parent="COIN/COIN16" instance=ExtResource( 17 )]
+position = Vector2( 159, 34 )
+
+[node name="COIN7" parent="COIN/COIN16" instance=ExtResource( 17 )]
+position = Vector2( 193, 18 )
+
+[node name="COIN8" parent="COIN/COIN16" instance=ExtResource( 17 )]
+position = Vector2( 209, 0 )
 
 [editable path="SpiningBlade"]
 [editable path="SpiningBlade/SpiningBlade2"]

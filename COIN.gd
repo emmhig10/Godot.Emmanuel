@@ -14,7 +14,7 @@ func _on_Area2D_body_entered(body):
 		$AnimationPlayer.play("coin picked up")
 		coin_picked_up = true
 		coin_total += 1
-		print(coin_total)
-		print(coin_picked_up)
+		#print(coin_total)
+		#print(coin_picked_up)
 		emit_signal("coin_collected")
 	

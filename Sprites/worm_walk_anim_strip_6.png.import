@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/Pixel-art-Asset-Store.jpg-e078a5f57fc108d50a3fb5e9fb67dde4.stex"
+path="res://.import/worm_walk_anim_strip_6.png-b9a7e74a49bcd5b528dc2ef68a00bd96.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Sprites/Pixel-art-Asset-Store.jpg"
-dest_files=[ "res://.import/Pixel-art-Asset-Store.jpg-e078a5f57fc108d50a3fb5e9fb67dde4.stex" ]
+source_file="res://Sprites/worm_walk_anim_strip_6.png"
+dest_files=[ "res://.import/worm_walk_anim_strip_6.png-b9a7e74a49bcd5b528dc2ef68a00bd96.stex" ]
 
 [params]
 

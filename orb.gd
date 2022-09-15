@@ -4,7 +4,7 @@ var orbs_picked_up = 0
 var orb_total = 0
 signal orb_collected
 func _ready():
-	$AnimationPlayer.play("orb norm")
+	$AnimationPlayer.play("invisible")
 
 
 func _on_Area2D_body_entered(body):
@@ -15,3 +15,7 @@ func _on_Area2D_body_entered(body):
 		#print(coin_total)
 		#print(coin_picked_up)
 		emit_signal("orb_collected")
+
+
+func _on_vase_vase_is_broken():
+	$AnimationPlayer.play("orb norm")

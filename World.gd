@@ -17,9 +17,6 @@ func _on_COIN_coin_collected():
 	print(scoretext)
 	$CanvasLayer/Control/label.text = (scoretext)
 	
-
-
-
 func _on_orb_orb_collected():
 	score_orbs = score_orbs + 1
 	var scoretext_orbs = ("orbs collected:")+String(score_orbs) 

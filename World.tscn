@@ -1300,8 +1300,9 @@ custom_fonts/font = SubResource( 25 )
 text = "coins: 00"
 
 [node name="orb" parent="." instance=ExtResource( 20 )]
-position = Vector2( -34, 28 )
+position = Vector2( -38, 4 )
 
+[connection signal="vase_is_broken" from="vase" to="orb" method="_on_vase_vase_is_broken"]
 [connection signal="coin_collected" from="COIN" to="." method="_on_COIN_coin_collected"]
 [connection signal="coin_collected" from="COIN5" to="." method="_on_COIN_coin_collected"]
 [connection signal="coin_collected" from="COIN7" to="." method="_on_COIN_coin_collected"]

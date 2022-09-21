@@ -16,7 +16,7 @@ var double_jump = true
 export (float) var friction = 10
 export (float) var acceleration = 25 
 
-enum state {IDLE,RUNNING,PUSHING,ROLLING,JUMP,STARTJUMP,FALL,ATTACK}
+enum state {IDLE,RUNNING,PUSHING,ROLLING,JUMP,STARTJUMP,FALL,ATTACK,WALLJUMP}
 
 onready var player_state = state.IDLE
  
@@ -51,7 +51,12 @@ func handle_state(player_state):
 	match(player_state):
 		state.STARTJUMP:
 			velocity.y = jump_speed
-		
+		state.WALLJUMP:
+			velocity.y = jump_speed*.75
+			if $Sprite.flip_h == false:
+				velocity.x = -250
+			else:
+				velocity.x = 250
 
 	pass
 
@@ -81,6 +86,8 @@ func _physics_process(delta):
 		if Input.is_action_just_pressed(\"jump\") and double_jump == true:
 			player_state = state.STARTJUMP
 			double_jump = false
+		if Input.is_action_just_pressed(\"jump\") and is_on_wall():
+			player_state = state.WALLJUMP
 	
 	handle_state(player_state)
 	update_animation(player_state)

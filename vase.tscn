@@ -7,7 +7,7 @@
 [sub_resource type="RectangleShape2D" id=1]
 extents = Vector2( 5, 4.5 )
 
-[sub_resource type="Animation" id=2]
+[sub_resource type="Animation" id=68]
 length = 0.001
 tracks/0/type = "value"
 tracks/0/path = NodePath("Sprite:frame")
@@ -46,7 +46,7 @@ tracks/2/keys = {
 "values": [ ExtResource( 2 ) ]
 }
 
-[sub_resource type="Animation" id=3]
+[sub_resource type="Animation" id=69]
 resource_name = "vase braking"
 length = 0.5
 tracks/0/type = "value"
@@ -86,7 +86,7 @@ tracks/2/keys = {
 "values": [ ExtResource( 2 ) ]
 }
 
-[sub_resource type="Animation" id=4]
+[sub_resource type="Animation" id=70]
 resource_name = "vase norm"
 length = 0.1
 tracks/0/type = "value"
@@ -139,8 +139,8 @@ position = Vector2( 0, 3.5 )
 shape = SubResource( 1 )
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="."]
-anims/RESET = SubResource( 2 )
-"anims/vase braking" = SubResource( 3 )
-"anims/vase norm" = SubResource( 4 )
+anims/RESET = SubResource( 68 )
+"anims/vase braking" = SubResource( 69 )
+"anims/vase norm" = SubResource( 70 )
 
 [connection signal="body_entered" from="Sprite/Area2D" to="." method="_on_Area2D_body_entered"]

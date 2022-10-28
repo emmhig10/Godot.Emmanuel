@@ -1,6 +1,7 @@
-[gd_scene load_steps=12 format=2]
+[gd_scene load_steps=13 format=2]
 
 [ext_resource path="res://Sprites/herochar_spritesheet(new).png" type="Texture" id=1]
+[ext_resource path="res://mixkit-quick-jump-arcade-game-239.wav" type="AudioStream" id=2]
 
 [sub_resource type="GDScript" id=10]
 script/source = "extends KinematicBody2D
@@ -254,3 +255,6 @@ anims/jump = SubResource( 4 )
 anims/pushing = SubResource( 5 )
 anims/roll = SubResource( 9 )
 anims/running = SubResource( 6 )
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 2 )

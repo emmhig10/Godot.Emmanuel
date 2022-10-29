@@ -583,7 +583,10 @@ smoothing_enabled = true
 script = ExtResource( 3 )
 
 [node name="player" parent="." instance=ExtResource( 1 )]
-position = Vector2( -313, 152 )
+position = Vector2( -332, 151 )
+
+[node name="End_Door" parent="." instance=ExtResource( 19 )]
+position = Vector2( -440, 164 )
 
 [node name="tiki torch" parent="." instance=ExtResource( 14 )]
 position = Vector2( 934, -76 )
@@ -1230,9 +1233,9 @@ margin_right = -71.0
 margin_bottom = 41.0
 
 [node name="label" type="Label" parent="CanvasLayer/Control"]
-margin_left = 1033.0
+margin_left = 948.0
 margin_top = 27.0
-margin_right = 1258.0
+margin_right = 1173.0
 margin_bottom = 63.0
 custom_fonts/font = SubResource( 25 )
 text = "coins: 00"
@@ -1808,9 +1811,6 @@ position = Vector2( -208.001, -222.999 )
 
 [node name="SpikeTrap170" parent="SpikeTrap" instance=ExtResource( 5 )]
 position = Vector2( -224.001, -222.999 )
-
-[node name="End_Door" parent="." instance=ExtResource( 19 )]
-position = Vector2( -440, 164 )
 
 [connection signal="coin_collected" from="COIN" to="." method="_on_COIN_coin_collected"]
 [connection signal="coin_collected" from="COIN/COIN5" to="." method="_on_COIN_coin_collected"]

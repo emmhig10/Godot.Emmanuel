@@ -1,0 +1,47 @@
+[gd_scene load_steps=5 format=2]
+
+[ext_resource path="res://Tittle screen.gd" type="Script" id=1]
+[ext_resource path="res://other Assets/joystix monospace.ttf" type="DynamicFontData" id=2]
+[ext_resource path="res://other Assets/background for title screen.jpg" type="Texture" id=3]
+
+[sub_resource type="DynamicFont" id=1]
+size = 29
+font_data = ExtResource( 2 )
+
+[node name="Tittle screen" type="Control"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+script = ExtResource( 1 )
+
+[node name="BackgroundForTitleScreen" type="Sprite" parent="."]
+position = Vector2( 640, 365.5 )
+scale = Vector2( 1.46818, 1.45833 )
+texture = ExtResource( 3 )
+
+[node name="Start Button" type="Button" parent="."]
+margin_left = 817.0
+margin_top = 79.0
+margin_right = 1079.0
+margin_bottom = 153.0
+custom_fonts/font = SubResource( 1 )
+text = "Start Game"
+
+[node name="Quit" type="Button" parent="."]
+margin_left = 818.0
+margin_top = 186.0
+margin_right = 1080.0
+margin_bottom = 260.0
+custom_fonts/font = SubResource( 1 )
+text = "Quit"
+
+[node name="Controls and Instuctions" type="Button" parent="."]
+margin_left = 819.0
+margin_top = 290.0
+margin_right = 1081.0
+margin_bottom = 364.0
+custom_fonts/font = SubResource( 1 )
+text = "Controls"
+
+[connection signal="pressed" from="Start Button" to="." method="_on_Start_Button_pressed"]
+[connection signal="pressed" from="Quit" to="." method="_on_Quit_pressed"]
+[connection signal="pressed" from="Controls and Instuctions" to="." method="_on_Controls_and_Instuctions_pressed"]

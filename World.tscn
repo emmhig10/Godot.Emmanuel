@@ -18,7 +18,7 @@
 [ext_resource path="res://Sprites/bluebackground.JPG" type="Texture" id=16]
 [ext_resource path="res://COIN.tscn" type="PackedScene" id=17]
 [ext_resource path="res://other Assets/joystix monospace.ttf" type="DynamicFontData" id=18]
-[ext_resource path="res://end gem.tscn" type="PackedScene" id=19]
+[ext_resource path="res://End_Door.tscn" type="PackedScene" id=19]
 [ext_resource path="res://orb.tscn" type="PackedScene" id=20]
 [ext_resource path="res://Y2Mate.is - Two Steps From Hell - Stronger Faster Braver-NDypKtiDWdA-160k-1656066990111.mp3" type="AudioStream" id=21]
 
@@ -577,6 +577,14 @@ position = Vector2( -100, 420 )
 [node name="COIN5" parent="TileMap2" instance=ExtResource( 17 )]
 position = Vector2( 235, 479 )
 
+[node name="Camera2D" type="Camera2D" parent="."]
+current = true
+smoothing_enabled = true
+script = ExtResource( 3 )
+
+[node name="player" parent="." instance=ExtResource( 1 )]
+position = Vector2( -313, 152 )
+
 [node name="tiki torch" parent="." instance=ExtResource( 14 )]
 position = Vector2( 934, -76 )
 
@@ -603,14 +611,6 @@ position = Vector2( -957, 528 )
 
 [node name="tiki torch8" parent="tiki torch" instance=ExtResource( 14 )]
 position = Vector2( -751, 528 )
-
-[node name="Camera2D" type="Camera2D" parent="."]
-current = true
-smoothing_enabled = true
-script = ExtResource( 3 )
-
-[node name="player" parent="." instance=ExtResource( 1 )]
-position = Vector2( 57, 43 )
 
 [node name="TileMap" type="TileMap" parent="."]
 tile_set = SubResource( 2 )
@@ -1057,29 +1057,29 @@ position = Vector2( -707, 801 )
 [node name="CollisionShape2D" parent="DoorAndButton/Door/Door" index="0"]
 position = Vector2( 0.375, 0 )
 
+[node name="SwingingTrap3" parent="." instance=ExtResource( 4 )]
+position = Vector2( 832, 48 )
+
+[node name="SwingingTrap2" parent="." instance=ExtResource( 4 )]
+position = Vector2( -69, -129 )
+
+[node name="SwingingTrap" parent="." instance=ExtResource( 4 )]
+position = Vector2( 209, 383 )
+
+[node name="SwingingTrap5" parent="." instance=ExtResource( 4 )]
+position = Vector2( -47, 400 )
+
+[node name="SwingingTrap7" parent="." instance=ExtResource( 4 )]
+position = Vector2( 38, 497 )
+
+[node name="SwingingTrap6" parent="." instance=ExtResource( 4 )]
+position = Vector2( -53, 497 )
+
+[node name="SwingingTrap8" parent="." instance=ExtResource( 4 )]
+position = Vector2( 128, 497 )
+
 [node name="SwingingTrap4" parent="." instance=ExtResource( 4 )]
 position = Vector2( 944, 49 )
-
-[node name="SwingingTrap3" parent="SwingingTrap4" instance=ExtResource( 4 )]
-position = Vector2( -112, -1 )
-
-[node name="SwingingTrap2" parent="SwingingTrap4" instance=ExtResource( 4 )]
-position = Vector2( -1013, -178 )
-
-[node name="SwingingTrap" parent="SwingingTrap4" instance=ExtResource( 4 )]
-position = Vector2( -735, 334 )
-
-[node name="SwingingTrap5" parent="SwingingTrap4" instance=ExtResource( 4 )]
-position = Vector2( -991, 351 )
-
-[node name="SwingingTrap7" parent="SwingingTrap4" instance=ExtResource( 4 )]
-position = Vector2( -906, 448 )
-
-[node name="SwingingTrap6" parent="SwingingTrap4" instance=ExtResource( 4 )]
-position = Vector2( -997, 448 )
-
-[node name="SwingingTrap8" parent="SwingingTrap4" instance=ExtResource( 4 )]
-position = Vector2( -816, 448 )
 
 [node name="SpiningBlade" parent="." instance=ExtResource( 7 )]
 position = Vector2( 310, 158 )
@@ -1809,8 +1809,8 @@ position = Vector2( -208.001, -222.999 )
 [node name="SpikeTrap170" parent="SpikeTrap" instance=ExtResource( 5 )]
 position = Vector2( -224.001, -222.999 )
 
-[node name="end gem" parent="." instance=ExtResource( 19 )]
-position = Vector2( -443, 167 )
+[node name="End_Door" parent="." instance=ExtResource( 19 )]
+position = Vector2( -440, 164 )
 
 [connection signal="coin_collected" from="COIN" to="." method="_on_COIN_coin_collected"]
 [connection signal="coin_collected" from="COIN/COIN5" to="." method="_on_COIN_coin_collected"]

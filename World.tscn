@@ -585,9 +585,6 @@ script = ExtResource( 3 )
 [node name="player" parent="." instance=ExtResource( 1 )]
 position = Vector2( -332, 151 )
 
-[node name="End_Door" parent="." instance=ExtResource( 19 )]
-position = Vector2( -440, 164 )
-
 [node name="tiki torch" parent="." instance=ExtResource( 14 )]
 position = Vector2( 934, -76 )
 
@@ -1812,6 +1809,9 @@ position = Vector2( -208.001, -222.999 )
 [node name="SpikeTrap170" parent="SpikeTrap" instance=ExtResource( 5 )]
 position = Vector2( -224.001, -222.999 )
 
+[node name="Area2D" parent="." instance=ExtResource( 19 )]
+position = Vector2( -440, 164 )
+
 [connection signal="coin_collected" from="COIN" to="." method="_on_COIN_coin_collected"]
 [connection signal="coin_collected" from="COIN/COIN5" to="." method="_on_COIN_coin_collected"]
 [connection signal="coin_collected" from="COIN/COIN7" to="." method="_on_COIN_coin_collected"]
@@ -1898,3 +1898,4 @@ position = Vector2( -224.001, -222.999 )
 [editable path="moving platform"]
 [editable path="SpikeTrap/SpiningBlade4"]
 [editable path="SpikeTrap/SpiningBlade4/SpiningBlade3"]
+[editable path="Area2D"]

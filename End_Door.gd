@@ -1,4 +1,10 @@
 extends Node2D
 
-func _on_exit_body_entered(body):
-	get_tree().change_scene("res://End of Game.tscn")
+export(String) var scene_to_load
+
+
+func _ready():
+	pass
+	
+func _on_Area2D_area_entered(area):
+	get_tree().change_scene("res://End Of Game.tscn")

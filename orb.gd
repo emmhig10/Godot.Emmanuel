@@ -3,9 +3,6 @@ var orb_picked_up = false
 var orbs_picked_up = 0
 var orb_total = 0
 signal orb_collected
-func _ready():
-	$AnimationPlayer.play("invisible")
-
 
 func _on_Area2D_body_entered(body):
 	if orb_picked_up == false:

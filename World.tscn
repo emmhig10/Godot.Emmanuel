@@ -583,7 +583,7 @@ smoothing_enabled = true
 script = ExtResource( 3 )
 
 [node name="player" parent="." instance=ExtResource( 1 )]
-position = Vector2( -332, 151 )
+position = Vector2( 66, 34 )
 
 [node name="tiki torch" parent="." instance=ExtResource( 14 )]
 position = Vector2( 934, -76 )
@@ -1145,7 +1145,6 @@ rotation = -0.0160629
 
 [node name="moving platform" parent="." instance=ExtResource( 11 )]
 position = Vector2( -168, 680 )
-rotation = -1.57079
 
 [node name="Path2D" parent="moving platform" index="0"]
 position = Vector2( -0.329468, 0 )
@@ -1200,24 +1199,6 @@ position = Vector2( 467, -184 )
 
 [node name="vase2" parent="vase" instance=ExtResource( 15 )]
 position = Vector2( 1741, 303 )
-
-[node name="orb5" parent="." instance=ExtResource( 20 )]
-position = Vector2( 88, 8 )
-
-[node name="orb" parent="orb5" instance=ExtResource( 20 )]
-position = Vector2( 1234, -142 )
-
-[node name="orb4" parent="orb5" instance=ExtResource( 20 )]
-position = Vector2( 415, 545 )
-
-[node name="orb2" parent="orb5" instance=ExtResource( 20 )]
-position = Vector2( 2640, -176 )
-
-[node name="orb3" parent="orb5" instance=ExtResource( 20 )]
-position = Vector2( 2064, -176 )
-
-[node name="orb6" parent="orb5" instance=ExtResource( 20 )]
-position = Vector2( -336, 174 )
 
 [node name="CanvasLayer" type="CanvasLayer" parent="."]
 
@@ -1812,6 +1793,24 @@ position = Vector2( -224.001, -222.999 )
 [node name="Area2D" parent="." instance=ExtResource( 19 )]
 position = Vector2( -440, 164 )
 
+[node name="orb" parent="." instance=ExtResource( 20 )]
+position = Vector2( 2152, -169 )
+
+[node name="orb" parent="orb" instance=ExtResource( 20 )]
+position = Vector2( 576, 6 )
+
+[node name="orb2" parent="orb" instance=ExtResource( 20 )]
+position = Vector2( 386, 225 )
+
+[node name="orb3" parent="orb" instance=ExtResource( 20 )]
+position = Vector2( 288, 258 )
+
+[node name="orb4" parent="orb" instance=ExtResource( 20 )]
+position = Vector2( 160, 290 )
+
+[node name="orb5" parent="orb" instance=ExtResource( 20 )]
+position = Vector2( -1652, 722 )
+
 [connection signal="coin_collected" from="COIN" to="." method="_on_COIN_coin_collected"]
 [connection signal="coin_collected" from="COIN/COIN5" to="." method="_on_COIN_coin_collected"]
 [connection signal="coin_collected" from="COIN/COIN7" to="." method="_on_COIN_coin_collected"]
@@ -1878,11 +1877,6 @@ position = Vector2( -440, 164 )
 [connection signal="coin_collected" from="COIN/COIN2" to="." method="_on_COIN_coin_collected"]
 [connection signal="coin_collected" from="COIN/COIN3" to="." method="_on_COIN_coin_collected"]
 [connection signal="coin_collected" from="COIN/COIN4" to="." method="_on_COIN_coin_collected"]
-[connection signal="vase_is_broken" from="vase" to="orb5/orb" method="_on_vase_vase_is_broken"]
-[connection signal="orb_collected" from="orb5/orb" to="." method="_on_orb_orb_collected"]
-[connection signal="orb_collected" from="orb5/orb4" to="." method="_on_orb_orb_collected"]
-[connection signal="orb_collected" from="orb5/orb2" to="." method="_on_orb_orb_collected"]
-[connection signal="orb_collected" from="orb5/orb3" to="." method="_on_orb_orb_collected"]
 
 [editable path="DoorAndButton2"]
 [editable path="DoorAndButton5"]

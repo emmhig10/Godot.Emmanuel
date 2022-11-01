@@ -5,14 +5,14 @@
 
 [sub_resource type="Curve2D" id=1]
 _data = {
-"points": PoolVector2Array( 0, 0, 0, 0, -0.00158843, 0.999999, 0, 0, 0, 0, 1.00317, 280.703, 0, 0, 0, 0, -1.00159, 0.99841, 0, 0, 0, 0, -0.00158843, 0.999999 )
+"points": PoolVector2Array( 0, 0, 0, 0, -0.00158843, 0.999999, 0, 0, 0, 0, 2.00255, 152.13, 0, 0, 0, 0, 1.00317, 280.703, 0, 0, 0, 0, -1.00159, 0.99841, 0, 0, 0, 0, -0.00158843, 0.999999 )
 }
 
 [sub_resource type="RectangleShape2D" id=2]
 extents = Vector2( 24, 8 )
 
 [node name="moving platform" type="Node2D"]
-rotation = -1.57239
+rotation = -1.5708
 script = ExtResource( 2 )
 
 [node name="Path2D" type="Path2D" parent="."]
